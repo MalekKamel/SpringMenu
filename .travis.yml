@@ -1,0 +1,14 @@
+# references:
+# * https://www.objc.io/issues/6-build-tools/travis-ci/
+# * https://github.com/supermarin/xcpretty#usage
+
+osx_image: xcode12.4
+language: objective-c
+# cache: cocoapods
+# podfile: Example/Podfile
+# before_install:
+# - gem install cocoapods # Since Travis is not always on latest version
+# - pod install --project-directory=Example
+script:
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES -project SpringMenu.xcodeproj -scheme Example -sdk iphonesimulator14.4 ONLY_ACTIVE_ARCH=NO -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.2.2' | xcpretty
+- pod lib lint
