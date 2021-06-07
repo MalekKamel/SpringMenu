@@ -24,26 +24,26 @@ struct ContentView: View {
     private func Two() -> some View {
         Group {
             let settings1 = SpringMenuSettings.Builder()
-                    .icon(Image(systemName: "plus"))
+                    .icon(.plus)
                     .items(items: SpringMenuPreview.two(), position: .top)
                     .withPlaceholderIconsAnimation(false)
                     .build()
             SpringMenu(settings: settings1)
 
             let settings2 = SpringMenuSettings.Builder()
-                    .icon(Image(systemName: "plus"))
+                    .icon(.plus)
                     .items(items: SpringMenuPreview.two(), position: .bottom)
                     .build()
             SpringMenu(settings: settings2)
 
             let settings3 = SpringMenuSettings.Builder()
-                    .icon(Image(systemName: "plus"))
+                    .icon(.plus)
                     .items(items: SpringMenuPreview.two(), position: .vertical)
                     .build()
             SpringMenu(settings: settings3)
 
             let settings4 = SpringMenuSettings.Builder()
-                    .icon(Image(systemName: "plus"))
+                    .icon(.plus)
                     .items(items: SpringMenuPreview.two(), position: .horizontal)
                     .build()
             SpringMenu(settings: settings4)
@@ -53,27 +53,27 @@ struct ContentView: View {
     private func Three() -> some View {
         Group {
             let settings1 = SpringMenuSettings.Builder()
-                    .icon(Image(systemName: "plus"))
+                    .icon(.plus)
                     .items(items: SpringMenuPreview.three(), position: .top)
                     .withPlaceholderIconsAnimation(false)
                     .build()
             SpringMenu(settings: settings1)
 
             let settings2 = SpringMenuSettings.Builder()
-                    .icon(Image(systemName: "plus"))
+                    .icon(.plus)
                     .items(items: SpringMenuPreview.three(), position: .bottom)
                     .withPlaceholderIconsAnimation(false)
                     .build()
             SpringMenu(settings: settings2)
 
             let settings3 = SpringMenuSettings.Builder()
-                    .icon(Image(systemName: "plus"))
+                    .icon(.plus)
                     .items(items: SpringMenuPreview.three(), position: .leading)
                     .build()
             SpringMenu(settings: settings3)
 
             let settings4 = SpringMenuSettings.Builder()
-                    .icon(Image(systemName: "plus"))
+                    .icon(.plus)
                     .items(items: SpringMenuPreview.three(), position: .trailing)
                     .build()
             SpringMenu(settings: settings4)
@@ -82,7 +82,7 @@ struct ContentView: View {
 
     private func Four() -> some View {
         let settings = SpringMenuSettings.Builder()
-                .icon(Image(systemName: "plus"))
+                .icon(.plus)
                 .items(items: SpringMenuPreview.four())
                 .build()
         return SpringMenu(settings: settings)
@@ -91,25 +91,25 @@ struct ContentView: View {
     private func Five() -> some View {
         Group {
             let settings1 = SpringMenuSettings.Builder()
-                    .icon(Image(systemName: "plus"))
+                    .icon(.plus)
                     .items(items: SpringMenuPreview.five(), gravity: .top)
                     .build()
             SpringMenu(settings: settings1)
 
             let settings2 = SpringMenuSettings.Builder()
-                    .icon(Image(systemName: "plus"))
+                    .icon(.plus)
                     .items(items: SpringMenuPreview.five(), gravity: .bottom)
                     .build()
             SpringMenu(settings: settings2)
 
             let settings3 = SpringMenuSettings.Builder()
-                    .icon(Image(systemName: "plus"))
+                    .icon(.plus)
                     .items(items: SpringMenuPreview.five(), gravity: .leading)
                     .build()
             SpringMenu(settings: settings3)
 
             let settings4 = SpringMenuSettings.Builder()
-                    .icon(Image(systemName: "plus"))
+                    .icon(.plus)
                     .items(items: SpringMenuPreview.five(), gravity: .trailing)
                     .build()
             SpringMenu(settings: settings4)
@@ -119,13 +119,13 @@ struct ContentView: View {
     private func Six() -> some View {
         Group {
             let settings1 = SpringMenuSettings.Builder()
-                    .icon(Image(systemName: "plus"))
+                    .icon(.plus)
                     .items(items: SpringMenuPreview.six(), position: .vertical)
                     .build()
             SpringMenu(settings: settings1)
 
             let settings2 = SpringMenuSettings.Builder()
-                    .icon(Image(systemName: "plus"))
+                    .icon(.plus)
                     .items(items: SpringMenuPreview.six(), position: .horizontal)
                     .build()
             SpringMenu(settings: settings2)
@@ -135,25 +135,25 @@ struct ContentView: View {
     private func Seven() -> some View {
         Group {
             let settings1 = SpringMenuSettings.Builder()
-                    .icon(Image(systemName: "plus"))
+                    .icon(.plus)
                     .items(items: SpringMenuPreview.seven(), gravity: .top)
                     .build()
             SpringMenu(settings: settings1)
 
             let settings2 = SpringMenuSettings.Builder()
-                    .icon(Image(systemName: "plus"))
+                    .icon(.plus)
                     .items(items: SpringMenuPreview.seven(), gravity: .bottom)
                     .build()
             SpringMenu(settings: settings2)
 
             let settings3 = SpringMenuSettings.Builder()
-                    .icon(Image(systemName: "plus"))
+                    .icon(.plus)
                     .items(items: SpringMenuPreview.seven(), gravity: .leading)
                     .build()
             SpringMenu(settings: settings3)
 
             let settings4 = SpringMenuSettings.Builder()
-                    .icon(Image(systemName: "plus"))
+                    .icon(.plus)
                     .items(items: SpringMenuPreview.seven(), gravity: .trailing)
                     .build()
             SpringMenu(settings: settings4)
@@ -162,7 +162,7 @@ struct ContentView: View {
 
     private func Eight() -> some View {
         let settings = SpringMenuSettings.Builder()
-                .icon(Image(systemName: "plus"))
+                .icon(.plus)
                 .items(items: SpringMenuPreview.eight())
                 .build()
         return SpringMenu(settings: settings)

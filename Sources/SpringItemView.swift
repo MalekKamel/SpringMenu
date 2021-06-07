@@ -56,7 +56,7 @@ struct Spring_Previews: PreviewProvider {
     static var previews: some View {
         let item = SpringItem(icon: Image(systemName: ""))
         let settings = SpringMenuSettings.Builder()
-                .icon(Image(systemName: "plus"))
+                .icon(.plus)
                 .build()
         SpringItemView(expand: .constant(true), item: item, direction: .top, settings: settings)
     }

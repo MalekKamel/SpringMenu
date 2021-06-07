@@ -6,7 +6,7 @@
 import SwiftUI
 
 public class SpringMenuSettings {
-    public var icon: Image? = nil
+    public var icon: SpringIcon = .plus
     var items: SpringItems = SpringItems(items: [])
     public var hasPlaceholderItemsAnimation: Bool = true
 
@@ -20,7 +20,7 @@ public class SpringMenuSettings {
 
         }
 
-        public func icon(_ value: Image) -> Builder {
+        public func icon(_ value: SpringIcon) -> Builder {
             settings.icon = value
             return self
         }

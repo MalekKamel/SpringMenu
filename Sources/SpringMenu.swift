@@ -15,29 +15,46 @@ public struct SpringMenu: View {
 
     public var body: some View {
         ZStack {
-            Color.black
-                    .edgesIgnoringSafeArea(.all)
+            Color.black.edgesIgnoringSafeArea(.all)
             ZStack {
-                MenuItems()
-
-                settings.icon
-                        .font(.system(size: 40, weight: isAnimating ? .regular : .semibold, design: .rounded))
-                        .foregroundColor(isAnimating ? Color.white : Color.black)
-                        .rotationEffect(isAnimating ? .degrees(45) : .degrees(0))
-                        .scaleEffect(isAnimating ? 3 : 1)
-                        .opacity(isAnimating ? 0.5 : 1)
-                        .animation(Animation.spring(response: 0.35, dampingFraction: 0.85, blendDuration: 1))
-                        .onTapGesture {
-                            self.isAnimating.toggle()
-                        }
+                ItemsView()
+                IconView()
             }.frame(height: 300)
         }
     }
 
-    private func MenuItems() -> some View {
+    private func ItemsView() -> some View {
         ForEach(settings.items.items) { item in
             SpringItemView(expand: $isAnimating, item: item, direction: item.direction, settings: settings)
         }
+    }
+
+    private func IconView() -> some View {
+        Group {
+            switch settings.icon {
+            case .plus:
+                DefaultIconView(systemName: "plus")
+            case .system(let name):
+                DefaultIconView(systemName: name)
+            case .custom(let image):
+                image.onTapGesture {
+                    isAnimating.toggle()
+                }
+            }
+        }
+    }
+
+    private func DefaultIconView(systemName: String) -> some View {
+        Image(systemName: systemName)
+                .font(.system(size: 40, weight: isAnimating ? .regular : .semibold, design: .rounded))
+                .foregroundColor(isAnimating ? Color.white : Color.black)
+                .rotationEffect(isAnimating ? .degrees(45) : .degrees(0))
+                .scaleEffect(isAnimating ? 3 : 1)
+                .opacity(isAnimating ? 0.5 : 1)
+                .animation(Animation.spring(response: 0.35, dampingFraction: 0.85, blendDuration: 1))
+                .onTapGesture {
+                    isAnimating.toggle()
+                }
     }
 }
 
@@ -54,7 +71,7 @@ struct SpringMenu_Previews: PreviewProvider {
                 item8: SpringItem(icon: Image(systemName: "mic.fill"))
         )
         let settings = SpringMenuSettings.Builder()
-                .icon(Image(systemName: "plus"))
+                .icon(.plus)
                 .items(items: items)
                 .build()
         SpringMenu(settings: settings)
