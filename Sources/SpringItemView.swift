@@ -16,7 +16,7 @@ public struct SpringItemView: View {
             ZStack {
                 item.icon
                         .font(.system(size: 32, weight: .medium, design: .rounded))
-                        .foregroundColor(Color.black)
+                        .foregroundColor(item.foregroundColor)
                         .padding()
                         .opacity(expand ? 0.85 : 0)
                         .scaleEffect(expand ? 1 : 0)
@@ -24,7 +24,7 @@ public struct SpringItemView: View {
                         .animation(Animation.easeOut(duration: 0.15))
             }
                     .frame(width: 82, height: 82)
-                    .background(item.isPlaceholder && expand ? .clear : item.background)
+                    .background(backgroundColor())
                     .cornerRadius(expand ? 41 : 8)
                     .scaleEffect(expand ? 1 : 0.5)
                     .opacity(itemOpacity())
@@ -33,6 +33,15 @@ public struct SpringItemView: View {
                     .animation(anim())
         }
                 .offset(x: direction.containerOffset.x, y: direction.containerOffset.y)
+    }
+
+    private func backgroundColor() -> Color? {
+//        guard !(item.isPlaceholder && expand) else {
+//            return .clear
+//        }
+        return expand ?
+                item.backgroundColor :
+                settings.iconBackgroundColor.collapsed
     }
 
     private func itemOpacity() -> Double {
@@ -54,17 +63,15 @@ public struct SpringItemView: View {
 
 struct Spring_Previews: PreviewProvider {
     static var previews: some View {
-        let item = SpringItem(icon: Image(systemName: ""))
+        let item = SpringItem.Builder()
+                .icon(Image(systemName: "folder"))
+                .foregroundColor(.blue)
+                .build()
         let settings = SpringMenuSettings.Builder()
-                .icon(.plus)
+                .icon(.plus,
+                        backgroundColor: SpringIconColor(collapsed: .white, expanded: .clear),
+                        foreGroundColor: SpringIconColor(collapsed: .black, expanded: .white))
                 .build()
         SpringItemView(expand: .constant(true), item: item, direction: .top, settings: settings)
     }
 }
-
-
-
-
-
-
-

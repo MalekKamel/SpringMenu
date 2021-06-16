@@ -22,6 +22,7 @@
 		58B8394A18501AAE65904020 /* SpringItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B8344EB41CBDE1FCD69AFA /* SpringItems.swift */; };
 		58B83B29CB5FDF04674F8D8A /* SpringItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B8349710743843A4C4E411 /* SpringItem.swift */; };
 		58B83B4F8DF60191794B74C1 /* SpringMenu.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 58B8328AB1473F8691474D97 /* SpringMenu.podspec */; };
+		58B83B62626CBBB35FE0DC6D /* SpringIconFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B839DD1BBA25452F70B9A8 /* SpringIconFactory.swift */; };
 		58B83DE02BE0B0E074465F1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B830DA36896C518BED3456 /* ContentView.swift */; };
 		58B83EE0EFCCAE42A73DF53D /* SpringMenuSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B83FF74FB8E55FD8EF9A8A /* SpringMenuSettings.swift */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 		58B8328AB1473F8691474D97 /* SpringMenu.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; path = SpringMenu.podspec; sourceTree = "<group>"; };
 		58B8344EB41CBDE1FCD69AFA /* SpringItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringItems.swift; sourceTree = "<group>"; };
 		58B8349710743843A4C4E411 /* SpringItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringItem.swift; sourceTree = "<group>"; };
+		58B839DD1BBA25452F70B9A8 /* SpringIconFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringIconFactory.swift; sourceTree = "<group>"; };
 		58B839FD6C8D4861F2E5028D /* SpringIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringIcon.swift; sourceTree = "<group>"; };
 		58B83D43DB1A7C2197F65D79 /* SpringItemDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringItemDirection.swift; sourceTree = "<group>"; };
 		58B83D75DC1B1804FC80C637 /* SpringMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringMenu.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				58B8301040BC27FDCE69BD12 /* SpringItemView.swift */,
 				58B83FF74FB8E55FD8EF9A8A /* SpringMenuSettings.swift */,
 				58B839FD6C8D4861F2E5028D /* SpringIcon.swift */,
+				58B839DD1BBA25452F70B9A8 /* SpringIconFactory.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				58B8364AA8FF40E25E2C341C /* SpringItemView.swift in Sources */,
 				58B83EE0EFCCAE42A73DF53D /* SpringMenuSettings.swift in Sources */,
 				58B833F886B101A6DB91CA24 /* SpringIcon.swift in Sources */,
+				58B83B62626CBBB35FE0DC6D /* SpringIconFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

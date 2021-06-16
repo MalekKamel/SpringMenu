@@ -7,22 +7,30 @@ import SwiftUI
 
 public struct SpringItem: Identifiable {
     public let id = UUID()
-    public let icon: Image
-    public let background: Color
+    public let icon: Image?
+    public var backgroundColor: Color? = .white
+    public var foregroundColor: Color? = .white
     public var direction: SpringItemDirection = .top
-    public let isPlaceholder: Bool
+    public var isPlaceholder: Bool = false
 
-    public init(icon: Image, background: Color = .white, isDummy: Bool = false) {
+    public init(icon: Image?,
+                backgroundColor: Color?,
+                foregroundColor: Color?) {
         self.icon = icon
-        self.background = background
-        self.isPlaceholder = isDummy
+        self.backgroundColor = backgroundColor
+        self.foregroundColor = foregroundColor
     }
 
-    init(icon: Image, background: Color = .white, direction: SpringItemDirection, isDummy: Bool = false) {
+    init(icon: Image,
+         backgroundColor: Color = .white,
+         foregroundColor: Color,
+         direction: SpringItemDirection,
+         isPlaceholder: Bool = false) {
         self.icon = icon
-        self.background = background
+        self.backgroundColor = backgroundColor
+        self.foregroundColor = foregroundColor
         self.direction = direction
-        self.isPlaceholder = isDummy
+        self.isPlaceholder = isPlaceholder
     }
 
     mutating func with(direction: SpringItemDirection) -> SpringItem {
@@ -31,7 +39,46 @@ public struct SpringItem: Identifiable {
     }
 
     static func placeholder(direction: SpringItemDirection) -> SpringItem {
-        SpringItem(icon: Image(systemName: ""), direction: direction, isDummy: true)
+        SpringItem(
+                icon: Image(systemName: ""),
+                foregroundColor: .clear,
+                direction: direction,
+                isPlaceholder: true)
+    }
+}
+
+public extension SpringItem {
+
+    class Builder {
+        private var iconImage: Image? = nil
+        private var background: Color? = .white
+        private var foreground: Color? = .white
+
+        public init() {
+        }
+
+        public func icon(_ value: Image?) -> Builder {
+            iconImage = value
+            return self
+        }
+
+        public func backgroundColor(_ value: Color?) -> Builder {
+            background = value
+            return self
+        }
+
+        public func foregroundColor(_ value: Color?) -> Builder {
+            foreground = value
+            return self
+        }
+
+        public func build() -> SpringItem {
+            SpringItem(
+                    icon: iconImage,
+                    backgroundColor: background,
+                    foregroundColor: foreground
+            )
+        }
     }
 }
 

@@ -15,11 +15,11 @@ public struct SpringMenu: View {
 
     public var body: some View {
         ZStack {
-            Color.black.edgesIgnoringSafeArea(.all)
+            settings.backgroundColor
             ZStack {
                 ItemsView()
                 IconView()
-            }.frame(height: 300)
+            }
         }
     }
 
@@ -30,49 +30,60 @@ public struct SpringMenu: View {
     }
 
     private func IconView() -> some View {
-        Group {
-            switch settings.icon {
-            case .plus:
-                DefaultIconView(systemName: "plus")
-            case .system(let name):
-                DefaultIconView(systemName: name)
-            case .custom(let image):
-                image.onTapGesture {
-                    isAnimating.toggle()
-                }
-            }
-        }
-    }
-
-    private func DefaultIconView(systemName: String) -> some View {
-        Image(systemName: systemName)
-                .font(.system(size: 40, weight: isAnimating ? .regular : .semibold, design: .rounded))
-                .foregroundColor(isAnimating ? Color.white : Color.black)
-                .rotationEffect(isAnimating ? .degrees(45) : .degrees(0))
-                .scaleEffect(isAnimating ? 3 : 1)
-                .opacity(isAnimating ? 0.5 : 1)
-                .animation(Animation.spring(response: 0.35, dampingFraction: 0.85, blendDuration: 1))
+        SpringIconFactory().make(
+                        icon: settings.icon,
+                        backgroundColor: settings.iconBackgroundColor,
+                        foregroundColor: settings.iconForegroundColor,
+                        isExpanded: isAnimating)
                 .onTapGesture {
                     isAnimating.toggle()
                 }
     }
+
 }
 
 struct SpringMenu_Previews: PreviewProvider {
     static var previews: some View {
         let items = EightSpringItems(
-                item1: SpringItem(icon: Image(systemName: "photo")),
-                item2: SpringItem(icon: Image(systemName: "note.text")),
-                item3: SpringItem(icon: Image(systemName: "doc")),
-                item4: SpringItem(icon: Image(systemName: "mic.fill")),
-                item5: SpringItem(icon: Image(systemName: "mic.fill")),
-                item6: SpringItem(icon: Image(systemName: "mic.fill")),
-                item7: SpringItem(icon: Image(systemName: "mic.fill")),
-                item8: SpringItem(icon: Image(systemName: "mic.fill"))
+                item1: SpringItem.Builder()
+                        .icon(Image(systemName: "photo"))
+                        .foregroundColor(.blue)
+                        .build(),
+                item2: SpringItem.Builder()
+                        .icon(Image(systemName: "note.text"))
+                        .foregroundColor(.blue)
+                        .build(),
+                item3: SpringItem.Builder()
+                        .icon(Image(systemName: "doc"))
+                        .foregroundColor(.blue)
+                        .build(),
+                item4: SpringItem.Builder()
+                        .icon(Image(systemName: "mic.fill"))
+                        .foregroundColor(.blue)
+                        .build(),
+                item5: SpringItem.Builder()
+                        .icon(Image(systemName: "pencil.circle"))
+                        .foregroundColor(.blue)
+                        .build(),
+                item6: SpringItem.Builder()
+                        .icon(Image(systemName: "folder"))
+                        .foregroundColor(.blue)
+                        .build(),
+                item7: SpringItem.Builder()
+                        .icon(Image(systemName: "square.and.arrow.up"))
+                        .foregroundColor(.blue)
+                        .build(),
+                item8: SpringItem.Builder()
+                        .icon(Image(systemName: "arrowshape.turn.up.forward"))
+                        .foregroundColor(.blue)
+                        .build()
         )
         let settings = SpringMenuSettings.Builder()
-                .icon(.plus)
+                .icon(.plus,
+                            backgroundColor: SpringIconColor(collapsed: .white, expanded: .clear),
+                            foreGroundColor: SpringIconColor(collapsed: .black, expanded: .white))
                 .items(items: items)
+                .backgroundColor(.blue)
                 .build()
         SpringMenu(settings: settings)
     }

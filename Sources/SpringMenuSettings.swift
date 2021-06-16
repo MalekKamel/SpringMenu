@@ -6,7 +6,10 @@
 import SwiftUI
 
 public class SpringMenuSettings {
+    public var backgroundColor: Color? = nil
     public var icon: SpringIcon = .plus
+    public var iconForegroundColor: SpringIconColor = SpringIconColor(collapsed: .clear, expanded: .clear)
+    public var iconBackgroundColor: SpringIconColor = SpringIconColor(collapsed: .clear, expanded: .clear)
     var items: SpringItems = SpringItems(items: [])
     public var hasPlaceholderItemsAnimation: Bool = true
 
@@ -20,8 +23,18 @@ public class SpringMenuSettings {
 
         }
 
-        public func icon(_ value: SpringIcon) -> Builder {
-            settings.icon = value
+        public func backgroundColor(_ value: Color) -> Builder {
+            settings.backgroundColor = value
+            return self
+        }
+
+        public func icon(_ icon: SpringIcon,
+                         backgroundColor: SpringIconColor,
+                         foreGroundColor: SpringIconColor
+                         ) -> Builder {
+            settings.icon = icon
+            settings.iconBackgroundColor = backgroundColor
+            settings.iconForegroundColor = foreGroundColor
             return self
         }
 
