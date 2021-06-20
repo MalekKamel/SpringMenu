@@ -26,10 +26,10 @@ struct ContentView: View {
             let settings1 = SpringMenuSettings.Builder()
                     .icon(.plus,
                             backgroundColor: SpringIconColor(collapsed: .white, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .black))
+                            foreGroundColor: SpringIconColor(collapsed: .black, expanded: .white))
                     .items(items: SpringMenuPreview.two(), position: .top)
                     .withPlaceholderIconsAnimation(false)
-                    .backgroundColor(.white)
+                    .backgroundColor(.black)
                     .build()
             SpringMenu(settings: settings1)
                     .frame(height: 300)
@@ -37,7 +37,7 @@ struct ContentView: View {
             let settings2 = SpringMenuSettings.Builder()
                     .icon(.plus,
                             backgroundColor: SpringIconColor(collapsed: .white, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .black))
+                            foreGroundColor: SpringIconColor(collapsed: .black, expanded: .white))
                     .items(items: SpringMenuPreview.two(), position: .bottom)
                     .backgroundColor(.black)
                     .build()
@@ -70,7 +70,7 @@ struct ContentView: View {
         Group {
             let settings1 = SpringMenuSettings.Builder()
                     .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .blue, expanded: .red),
+                            backgroundColor: SpringIconColor(collapsed: .white, expanded: .white),
                             foreGroundColor: SpringIconColor(collapsed: .black, expanded: .white))
                     .items(items: SpringMenuPreview.three(), position: .top)
                     .withPlaceholderIconsAnimation(false)
@@ -115,8 +115,8 @@ struct ContentView: View {
     private func Four() -> some View {
         let settings = SpringMenuSettings.Builder()
                 .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .white, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .black, expanded: .white))
+                        backgroundColor: SpringIconColor(collapsed: .white, expanded: .white),
+                        foreGroundColor: SpringIconColor(collapsed: .black, expanded: .white))
                 .items(items: SpringMenuPreview.four())
                 .backgroundColor(.black)
                 .build()
@@ -238,11 +238,12 @@ struct ContentView: View {
 
     private func Eight() -> some View {
         let settings = SpringMenuSettings.Builder()
-                .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .white, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .black, expanded: .white))
+                .icon(
+                        .send,
+                        backgroundColor: SpringIconColor(collapsed: .black, expanded: .clear),
+                        foreGroundColor: SpringIconColor(collapsed: .white, expanded: .black))
                 .items(items: SpringMenuPreview.eight())
-                .backgroundColor(.black)
+                .backgroundColor(.white)
                 .build()
         return SpringMenu(settings: settings)
                 .frame(height: 300)
@@ -255,13 +256,11 @@ class SpringMenuPreview {
         TwoSpringItems(
                 item1: SpringItem.Builder()
                         .icon(Image(systemName: "photo"))
-                        .backgroundColor(.black)
-                        .foregroundColor(.white)
+                        .foregroundColor(.blue)
                         .build(),
                 item2: SpringItem.Builder()
                         .icon(Image(systemName: "note.text"))
-                        .backgroundColor(.black)
-                        .foregroundColor(.white)
+                        .foregroundColor(.blue)
                         .build()
         )
     }
@@ -395,35 +394,43 @@ class SpringMenuPreview {
         EightSpringItems(
                 item1: SpringItem.Builder()
                         .icon(Image(systemName: "photo"))
-                        .foregroundColor(.blue)
+                        .backgroundColor(.black)
+                        .foregroundColor(.white)
                         .build(),
                 item2: SpringItem.Builder()
                         .icon(Image(systemName: "note.text"))
-                        .foregroundColor(.blue)
+                        .backgroundColor(.black)
+                        .foregroundColor(.white)
                         .build(),
                 item3: SpringItem.Builder()
                         .icon(Image(systemName: "doc"))
-                        .foregroundColor(.blue)
+                        .backgroundColor(.black)
+                        .foregroundColor(.white)
                         .build(),
                 item4: SpringItem.Builder()
                         .icon(Image(systemName: "mic.fill"))
-                        .foregroundColor(.blue)
+                        .backgroundColor(.black)
+                        .foregroundColor(.white)
                         .build(),
                 item5: SpringItem.Builder()
                         .icon(Image(systemName: "pencil.circle"))
-                        .foregroundColor(.blue)
+                        .backgroundColor(.black)
+                        .foregroundColor(.white)
                         .build(),
                 item6: SpringItem.Builder()
                         .icon(Image(systemName: "folder"))
-                        .foregroundColor(.blue)
+                        .backgroundColor(.black)
+                        .foregroundColor(.white)
                         .build(),
                 item7: SpringItem.Builder()
                         .icon(Image(systemName: "square.and.arrow.up"))
-                        .foregroundColor(.blue)
+                        .backgroundColor(.black)
+                        .foregroundColor(.white)
                         .build(),
                 item8: SpringItem.Builder()
                         .icon(Image(systemName: "arrowshape.turn.up.forward"))
-                        .foregroundColor(.blue)
+                        .backgroundColor(.black)
+                        .foregroundColor(.white)
                         .build()
         )
     }

@@ -20,7 +20,7 @@ class SpringIconFactory {
                         isExpanded: isExpanded)
                         .rotationEffect(isExpanded ? .degrees(45) : .degrees(0))
                         .scaleEffect(isExpanded ? 3 : 1)
-                        .opacity(isExpanded ? 0.5 : 1)
+//                        .opacity(isExpanded ? 0.5 : 1)
             case .send:
                 DefaultIconView(systemName: "paperplane.fill",
                         backgroundColor: backgroundColor,
@@ -46,7 +46,7 @@ class SpringIconFactory {
         Image(systemName: systemName)
                 .font(.system(size: 40, weight: isExpanded ? .regular : .semibold, design: .rounded))
                 .animation(Animation.spring(response: 0.35, dampingFraction: 0.85, blendDuration: 1))
-                .background(isExpanded ? backgroundColor.expanded : backgroundColor.collapsed)
+                .background(isExpanded ? .clear : backgroundColor.collapsed)
                 .foregroundColor(isExpanded ? foregroundColor.expanded : foregroundColor.collapsed)
     }
 }
