@@ -30,8 +30,8 @@ struct ContentView: View {
             Group {
                 let settings1 = SpringMenuSettings.Builder()
                         .icon(.plus,
-                                backgroundColor: SpringIconColor(collapsed: .black, expanded: .white),
-                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .black))
+                                backgroundColor: .init(collapsed: .black, expanded: .white),
+                                foreGroundColor: .init(collapsed: .white, expanded: .black))
                         .items(items: Items.two(), position: .top)
                         .withPlaceholderItemsAnimation(false)
                         .onTap {
@@ -45,8 +45,8 @@ struct ContentView: View {
 
                 let settings2 = SpringMenuSettings.Builder()
                         .icon(.plus,
-                                backgroundColor: SpringIconColor(collapsed: .black, expanded: .white),
-                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .black))
+                                backgroundColor: .init(collapsed: .black, expanded: .white),
+                                foreGroundColor: .init(collapsed: .white, expanded: .black))
                         .items(items: Items.two(), position: .bottom)
                         .backgroundColor(.white)
                         .build()
@@ -55,8 +55,8 @@ struct ContentView: View {
 
                 let settings3 = SpringMenuSettings.Builder()
                         .icon(.plus,
-                                backgroundColor: SpringIconColor(collapsed: .black, expanded: .white),
-                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .black))
+                                backgroundColor: .init(collapsed: .black, expanded: .white),
+                                foreGroundColor: .init(collapsed: .white, expanded: .black))
                         .items(items: Items.two(), position: .vertical)
                         .backgroundColor(.white)
                         .build()
@@ -65,8 +65,8 @@ struct ContentView: View {
 
                 let settings4 = SpringMenuSettings.Builder()
                         .icon(.plus,
-                                backgroundColor: SpringIconColor(collapsed: .black, expanded: .white),
-                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .black))
+                                backgroundColor: .init(collapsed: .black, expanded: .white),
+                                foreGroundColor: .init(collapsed: .white, expanded: .black))
                         .items(items: Items.two(), position: .horizontal)
                         .backgroundColor(.white)
                         .build()
@@ -85,8 +85,8 @@ struct ContentView: View {
         var body: some View {
             let settings1 = SpringMenuSettings.Builder()
                     .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .blue, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .blue))
+                            backgroundColor: .init(collapsed: .blue, expanded: .white),
+                            foreGroundColor: .init(collapsed: .white, expanded: .blue))
                     .items(items: Items.three(), position: .top)
                     .withPlaceholderItemsAnimation(false)
                     .backgroundColor(.white)
@@ -96,8 +96,8 @@ struct ContentView: View {
 
             let settings2 = SpringMenuSettings.Builder()
                     .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .blue, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .blue))
+                            backgroundColor: .init(collapsed: .blue, expanded: .white),
+                            foreGroundColor: .init(collapsed: .white, expanded: .blue))
                     .items(items: Items.three(), position: .bottom)
                     .withPlaceholderItemsAnimation(false)
                     .backgroundColor(.white)
@@ -107,8 +107,8 @@ struct ContentView: View {
 
             let settings3 = SpringMenuSettings.Builder()
                     .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .blue, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .blue))
+                            backgroundColor: .init(collapsed: .blue, expanded: .white),
+                            foreGroundColor: .init(collapsed: .white, expanded: .blue))
                     .items(items: Items.three(), position: .leading)
                     .backgroundColor(.white)
                     .build()
@@ -117,8 +117,8 @@ struct ContentView: View {
 
             let settings4 = SpringMenuSettings.Builder()
                     .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .blue, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .blue))
+                            backgroundColor: .init(collapsed: .blue, expanded: .white),
+                            foreGroundColor: .init(collapsed: .white, expanded: .blue))
                     .items(items: Items.three(), position: .trailing)
                     .backgroundColor(.white)
                     .build()
@@ -133,8 +133,8 @@ struct ContentView: View {
         var body: some View {
             let settings = SpringMenuSettings.Builder()
                     .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .orange, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .orange))
+                            backgroundColor: .init(collapsed: .orange, expanded: .white),
+                            foreGroundColor: .init(collapsed: .white, expanded: .orange))
                     .items(items: Items.four())
                     .backgroundColor(.white)
                     .build()
@@ -153,8 +153,8 @@ struct ContentView: View {
             Group {
                 let settings1 = SpringMenuSettings.Builder()
                         .icon(.plus,
-                                backgroundColor: SpringIconColor(collapsed: .green, expanded: .white),
-                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .green))
+                                backgroundColor: .init(collapsed: .green, expanded: .white),
+                                foreGroundColor: .init(collapsed: .white, expanded: .green))
                         .items(items: Items.five(), gravity: .top)
                         .backgroundColor(.white)
                         .build()
@@ -163,8 +163,8 @@ struct ContentView: View {
 
                 let settings2 = SpringMenuSettings.Builder()
                         .icon(.plus,
-                                backgroundColor: SpringIconColor(collapsed: .green, expanded: .white),
-                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .green))
+                                backgroundColor: .init(collapsed: .green, expanded: .white),
+                                foreGroundColor: .init(collapsed: .white, expanded: .green))
                         .items(items: Items.five(), gravity: .bottom)
                         .backgroundColor(.white)
                         .build()
@@ -173,8 +173,8 @@ struct ContentView: View {
 
                 let settings3 = SpringMenuSettings.Builder()
                         .icon(.plus,
-                                backgroundColor: SpringIconColor(collapsed: .green, expanded: .white),
-                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .green))
+                                backgroundColor: .init(collapsed: .green, expanded: .white),
+                                foreGroundColor: .init(collapsed: .white, expanded: .green))
                         .items(items: Items.five(), gravity: .leading)
                         .backgroundColor(.white)
                         .build()
@@ -183,8 +183,8 @@ struct ContentView: View {
 
                 let settings4 = SpringMenuSettings.Builder()
                         .icon(.plus,
-                                backgroundColor: SpringIconColor(collapsed: .green, expanded: .white),
-                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .green))
+                                backgroundColor: .init(collapsed: .green, expanded: .white),
+                                foreGroundColor: .init(collapsed: .white, expanded: .green))
                         .items(items: Items.five(), gravity: .trailing)
                         .backgroundColor(.white)
                         .build()
@@ -202,8 +202,8 @@ struct ContentView: View {
             Group {
                 let settings1 = SpringMenuSettings.Builder()
                         .icon(.plus,
-                                backgroundColor: SpringIconColor(collapsed: .pink, expanded: .white),
-                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .pink))
+                                backgroundColor: .init(collapsed: .pink, expanded: .white),
+                                foreGroundColor: .init(collapsed: .white, expanded: .pink))
                         .items(items: Items.six(), position: .vertical)
                         .backgroundColor(.white)
                         .build()
@@ -212,8 +212,8 @@ struct ContentView: View {
 
                 let settings2 = SpringMenuSettings.Builder()
                         .icon(.plus,
-                                backgroundColor: SpringIconColor(collapsed: .pink, expanded: .white),
-                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .pink))
+                                backgroundColor: .init(collapsed: .pink, expanded: .white),
+                                foreGroundColor: .init(collapsed: .white, expanded: .pink))
                         .items(items: Items.six(), position: .horizontal)
                         .backgroundColor(.white)
                         .build()
@@ -233,8 +233,8 @@ struct ContentView: View {
             Group {
                 let settings1 = SpringMenuSettings.Builder()
                         .icon(.plus,
-                                backgroundColor: SpringIconColor(collapsed: .purple, expanded: .white),
-                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .purple))
+                                backgroundColor: .init(collapsed: .purple, expanded: .white),
+                                foreGroundColor: .init(collapsed: .white, expanded: .purple))
                         .items(items: Items.seven(), gravity: .top)
                         .backgroundColor(.white)
                         .build()
@@ -243,8 +243,8 @@ struct ContentView: View {
 
                 let settings2 = SpringMenuSettings.Builder()
                         .icon(.plus,
-                                backgroundColor: SpringIconColor(collapsed: .purple, expanded: .white),
-                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .purple))
+                                backgroundColor: .init(collapsed: .purple, expanded: .white),
+                                foreGroundColor: .init(collapsed: .white, expanded: .purple))
                         .items(items: Items.seven(), gravity: .bottom)
                         .backgroundColor(.white)
                         .build()
@@ -253,8 +253,8 @@ struct ContentView: View {
 
                 let settings3 = SpringMenuSettings.Builder()
                         .icon(.plus,
-                                backgroundColor: SpringIconColor(collapsed: .purple, expanded: .white),
-                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .purple))
+                                backgroundColor: .init(collapsed: .purple, expanded: .white),
+                                foreGroundColor: .init(collapsed: .white, expanded: .purple))
                         .items(items: Items.seven(), gravity: .leading)
                         .backgroundColor(.white)
                         .build()
@@ -263,8 +263,8 @@ struct ContentView: View {
 
                 let settings4 = SpringMenuSettings.Builder()
                         .icon(.plus,
-                                backgroundColor: SpringIconColor(collapsed: .purple, expanded: .white),
-                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .purple))
+                                backgroundColor: .init(collapsed: .purple, expanded: .white),
+                                foreGroundColor: .init(collapsed: .white, expanded: .purple))
                         .items(items: Items.seven(), gravity: .trailing)
                         .backgroundColor(.white)
                         .build()
@@ -280,8 +280,8 @@ struct ContentView: View {
         var body: some View {
             let settings = SpringMenuSettings.Builder()
                     .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .red, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .red))
+                            backgroundColor: .init(collapsed: .red, expanded: .white),
+                            foreGroundColor: .init(collapsed: .white, expanded: .red))
                     .items(items: Items.eight())
                     .backgroundColor(.white)
                     .build()
