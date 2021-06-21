@@ -17,8 +17,7 @@ public struct SpringItemView: View {
                 item.icon
                         .font(.system(size: 32, weight: .medium, design: .rounded))
                         .foregroundColor(item.foregroundColor)
-                        .padding()
-                        .opacity(expand ? 0.85 : 0)
+                        .opacity(expand ? 1 : 0)
                         .scaleEffect(expand ? 1 : 0)
                         .rotationEffect(expand ? .degrees(-43) : .degrees(0))
                         .animation(Animation.easeOut(duration: 0.15))
@@ -36,10 +35,7 @@ public struct SpringItemView: View {
     }
 
     private func backgroundColor() -> Color? {
-//        guard !(item.isPlaceholder && expand) else {
-//            return .clear
-//        }
-        return expand ?
+        expand ?
                 item.backgroundColor :
                 settings.iconBackgroundColor.collapsed
     }

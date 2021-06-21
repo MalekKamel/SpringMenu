@@ -6,7 +6,7 @@
 import SwiftUI
 
 public struct SpringMenu: View {
-    @State var isAnimating: Bool = false
+    @State var isExpanded: Bool = false
     let settings: SpringMenuSettings
 
     public init(settings: SpringMenuSettings) {
@@ -15,17 +15,18 @@ public struct SpringMenu: View {
 
     public var body: some View {
         ZStack {
-            settings.backgroundColor
+            settings.backgroundColor?
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
             ZStack {
                 ItemsView()
                 IconView()
             }
-        }
+        }.background(Color(.blue))
     }
 
     private func ItemsView() -> some View {
         ForEach(settings.items.items) { item in
-            SpringItemView(expand: $isAnimating, item: item, direction: item.direction, settings: settings)
+            SpringItemView(expand: $isExpanded, item: item, direction: item.direction, settings: settings)
         }
     }
 
@@ -34,9 +35,9 @@ public struct SpringMenu: View {
                         icon: settings.icon,
                         backgroundColor: settings.iconBackgroundColor,
                         foregroundColor: settings.iconForegroundColor,
-                        isExpanded: isAnimating)
+                        isExpanded: isExpanded)
                 .onTapGesture {
-                    isAnimating.toggle()
+                    isExpanded.toggle()
                 }
     }
 
@@ -80,8 +81,8 @@ struct SpringMenu_Previews: PreviewProvider {
         )
         let settings = SpringMenuSettings.Builder()
                 .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .white, expanded: .clear),
-                            foreGroundColor: SpringIconColor(collapsed: .black, expanded: .white))
+                        backgroundColor: SpringIconColor(collapsed: .white, expanded: .clear),
+                        foreGroundColor: SpringIconColor(collapsed: .black, expanded: .white))
                 .items(items: items)
                 .backgroundColor(.blue)
                 .build()

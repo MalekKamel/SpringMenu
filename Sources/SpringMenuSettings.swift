@@ -38,7 +38,7 @@ public class SpringMenuSettings {
             return self
         }
 
-        public func withPlaceholderIconsAnimation(_ value: Bool) -> Builder {
+        public func withPlaceholderItemsAnimation(_ value: Bool) -> Builder {
             settings.hasPlaceholderItemsAnimation = value
             return self
         }
