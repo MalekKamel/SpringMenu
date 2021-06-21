@@ -7,30 +7,35 @@ import SwiftUI
 
 public struct SpringItem: Identifiable {
     public let id = UUID()
-    public let icon: Image?
-    public var backgroundColor: Color? = .white
-    public var foregroundColor: Color? = .white
-    public var direction: SpringItemDirection = .top
-    public var isPlaceholder: Bool = false
+    let icon: Image?
+    var backgroundColor: Color? = .white
+    var foregroundColor: Color? = .white
+    var direction: SpringItemDirection = .top
+    var isPlaceholder: Bool = false
+    var onTap: (() -> Void)? = nil
 
     public init(icon: Image?,
                 backgroundColor: Color?,
-                foregroundColor: Color?) {
+                foregroundColor: Color?,
+                onTap: (() -> Void)?) {
         self.icon = icon
         self.backgroundColor = backgroundColor
         self.foregroundColor = foregroundColor
+        self.onTap = onTap
     }
 
     init(icon: Image,
          backgroundColor: Color = .white,
          foregroundColor: Color,
          direction: SpringItemDirection,
-         isPlaceholder: Bool = false) {
+         isPlaceholder: Bool = false,
+         onTap: (() -> Void)?) {
         self.icon = icon
         self.backgroundColor = backgroundColor
         self.foregroundColor = foregroundColor
         self.direction = direction
         self.isPlaceholder = isPlaceholder
+        self.onTap = onTap
     }
 
     mutating func with(direction: SpringItemDirection) -> SpringItem {
@@ -43,7 +48,8 @@ public struct SpringItem: Identifiable {
                 icon: Image(systemName: ""),
                 foregroundColor: .clear,
                 direction: direction,
-                isPlaceholder: true)
+                isPlaceholder: true,
+                onTap: nil)
     }
 }
 
@@ -53,6 +59,7 @@ public extension SpringItem {
         private var iconImage: Image? = nil
         private var background: Color? = .white
         private var foreground: Color? = .white
+        private var onTap: (() -> Void)? = nil
 
         public init() {
         }
@@ -72,11 +79,17 @@ public extension SpringItem {
             return self
         }
 
+        public func onTap(_ value: (() -> Void)?) -> Builder {
+            onTap = value
+            return self
+        }
+
         public func build() -> SpringItem {
             SpringItem(
                     icon: iconImage,
                     backgroundColor: background,
-                    foregroundColor: foreground
+                    foregroundColor: foreground,
+                    onTap: onTap
             )
         }
     }

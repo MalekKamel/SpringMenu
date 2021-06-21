@@ -6,11 +6,12 @@
 import SwiftUI
 
 public struct SpringMenu: View {
-    @State var isExpanded: Bool = false
+    @Binding var isExpanded: Bool
     let settings: SpringMenuSettings
 
-    public init(settings: SpringMenuSettings) {
+    public init( isExpanded: Binding<Bool>, settings: SpringMenuSettings) {
         self.settings = settings
+        self._isExpanded = isExpanded
     }
 
     public var body: some View {
@@ -26,7 +27,7 @@ public struct SpringMenu: View {
 
     private func ItemsView() -> some View {
         ForEach(settings.items.items) { item in
-            SpringItemView(expand: $isExpanded, item: item, direction: item.direction, settings: settings)
+            SpringItemView(isExpanded: $isExpanded, item: item, direction: item.direction, settings: settings)
         }
     }
 
@@ -37,6 +38,7 @@ public struct SpringMenu: View {
                         foregroundColor: settings.iconForegroundColor,
                         isExpanded: isExpanded)
                 .onTapGesture {
+                    settings.onTap?()
                     isExpanded.toggle()
                 }
     }
@@ -86,7 +88,7 @@ struct SpringMenu_Previews: PreviewProvider {
                 .items(items: items)
                 .backgroundColor(.blue)
                 .build()
-        SpringMenu(settings: settings)
+        SpringMenu(isExpanded: .constant(false), settings: settings)
     }
 }
 

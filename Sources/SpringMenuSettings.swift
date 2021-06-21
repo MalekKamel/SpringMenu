@@ -12,6 +12,8 @@ public class SpringMenuSettings {
     public var iconBackgroundColor: SpringIconColor = SpringIconColor(collapsed: .clear, expanded: .clear)
     var items: SpringItems = SpringItems(items: [])
     public var hasPlaceholderItemsAnimation: Bool = true
+    var collapseOnItemTapped: Bool = true
+    var onTap: (() -> Void)? = nil
 
     public init() {
     }
@@ -75,6 +77,16 @@ public class SpringMenuSettings {
 
         public func items(items: EightSpringItems) -> Builder {
             settings.items = SpringItems.from(items)
+            return self
+        }
+
+        public func onTap(_ value: (() -> Void)?) -> Builder {
+            settings.onTap = value
+            return self
+        }
+
+        public func collapseOnItemTapped(_ value: Bool) -> Builder {
+            settings.collapseOnItemTapped = value
             return self
         }
 

@@ -20,53 +20,69 @@ struct ContentView: View {
         }
     }
 
-    private func Two() -> some View {
-        Group {
-            let settings1 = SpringMenuSettings.Builder()
-                    .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .black, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .black))
-                    .items(items: Items.two(), position: .top)
-                    .withPlaceholderItemsAnimation(false)
-                    .backgroundColor(.white)
-                    .build()
-            SpringMenu(settings: settings1)
-                    .frame(height: 300)
+    private struct Two: View {
+        @State var isExpanded: Bool = false
+        @State var isExpanded2: Bool = false
+        @State var isExpanded3: Bool = false
+        @State var isExpanded4: Bool = false
 
-            let settings2 = SpringMenuSettings.Builder()
-                    .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .black, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .black))
-                    .items(items: Items.two(), position: .bottom)
-                    .backgroundColor(.white)
-                    .build()
-            SpringMenu(settings: settings2)
-                    .frame(height: 300)
+        var body: some View {
+            Group {
+                let settings1 = SpringMenuSettings.Builder()
+                        .icon(.plus,
+                                backgroundColor: SpringIconColor(collapsed: .black, expanded: .white),
+                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .black))
+                        .items(items: Items.two(), position: .top)
+                        .withPlaceholderItemsAnimation(false)
+                        .onTap {
+                            print("Menu tapped")
+                        }
+                        .collapseOnItemTapped(false)
+                        .backgroundColor(.white)
+                        .build()
+                SpringMenu(isExpanded: $isExpanded, settings: settings1)
+                        .frame(height: 300)
 
-            let settings3 = SpringMenuSettings.Builder()
-                    .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .black, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .black))
-                    .items(items: Items.two(), position: .vertical)
-                    .backgroundColor(.white)
-                    .build()
-            SpringMenu(settings: settings3)
-                    .frame(height: 300)
+                let settings2 = SpringMenuSettings.Builder()
+                        .icon(.plus,
+                                backgroundColor: SpringIconColor(collapsed: .black, expanded: .white),
+                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .black))
+                        .items(items: Items.two(), position: .bottom)
+                        .backgroundColor(.white)
+                        .build()
+                SpringMenu(isExpanded: $isExpanded2, settings: settings2)
+                        .frame(height: 300)
 
-            let settings4 = SpringMenuSettings.Builder()
-                    .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .black, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .black))
-                    .items(items: Items.two(), position: .horizontal)
-                    .backgroundColor(.white)
-                    .build()
-            SpringMenu(settings: settings4)
-                    .frame(height: 300)
+                let settings3 = SpringMenuSettings.Builder()
+                        .icon(.plus,
+                                backgroundColor: SpringIconColor(collapsed: .black, expanded: .white),
+                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .black))
+                        .items(items: Items.two(), position: .vertical)
+                        .backgroundColor(.white)
+                        .build()
+                SpringMenu(isExpanded: $isExpanded3, settings: settings3)
+                        .frame(height: 300)
+
+                let settings4 = SpringMenuSettings.Builder()
+                        .icon(.plus,
+                                backgroundColor: SpringIconColor(collapsed: .black, expanded: .white),
+                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .black))
+                        .items(items: Items.two(), position: .horizontal)
+                        .backgroundColor(.white)
+                        .build()
+                SpringMenu(isExpanded: $isExpanded4, settings: settings4)
+                        .frame(height: 300)
+            }
         }
     }
 
-    private func Three() -> some View {
-        Group {
+    private struct Three: View {
+        @State var isExpanded: Bool = false
+        @State var isExpanded2: Bool = false
+        @State var isExpanded3: Bool = false
+        @State var isExpanded4: Bool = false
+
+        var body: some View {
             let settings1 = SpringMenuSettings.Builder()
                     .icon(.plus,
                             backgroundColor: SpringIconColor(collapsed: .blue, expanded: .white),
@@ -75,7 +91,7 @@ struct ContentView: View {
                     .withPlaceholderItemsAnimation(false)
                     .backgroundColor(.white)
                     .build()
-            SpringMenu(settings: settings1)
+            SpringMenu(isExpanded: $isExpanded, settings: settings1)
                     .frame(height: 300)
 
             let settings2 = SpringMenuSettings.Builder()
@@ -86,7 +102,7 @@ struct ContentView: View {
                     .withPlaceholderItemsAnimation(false)
                     .backgroundColor(.white)
                     .build()
-            SpringMenu(settings: settings2)
+            SpringMenu(isExpanded: $isExpanded2, settings: settings2)
                     .frame(height: 300)
 
             let settings3 = SpringMenuSettings.Builder()
@@ -96,7 +112,7 @@ struct ContentView: View {
                     .items(items: Items.three(), position: .leading)
                     .backgroundColor(.white)
                     .build()
-            SpringMenu(settings: settings3)
+            SpringMenu(isExpanded: $isExpanded3, settings: settings3)
                     .frame(height: 300)
 
             let settings4 = SpringMenuSettings.Builder()
@@ -106,145 +122,172 @@ struct ContentView: View {
                     .items(items: Items.three(), position: .trailing)
                     .backgroundColor(.white)
                     .build()
-            SpringMenu(settings: settings4)
+            SpringMenu(isExpanded: $isExpanded4, settings: settings4)
                     .frame(height: 300)
         }
     }
 
-    private func Four() -> some View {
-        let settings = SpringMenuSettings.Builder()
-                .icon(.plus,
-                        backgroundColor: SpringIconColor(collapsed: .orange, expanded: .white),
-                        foreGroundColor: SpringIconColor(collapsed: .white, expanded: .orange))
-                .items(items: Items.four())
-                .backgroundColor(.white)
-                .build()
-        return SpringMenu(settings: settings)
-                .frame(height: 300)
-    }
+    private struct Four: View {
+        @State var isExpanded: Bool = false
 
-    private func Five() -> some View {
-        Group {
-            let settings1 = SpringMenuSettings.Builder()
+        var body: some View {
+            let settings = SpringMenuSettings.Builder()
                     .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .green, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .green))
-                    .items(items: Items.five(), gravity: .top)
+                            backgroundColor: SpringIconColor(collapsed: .orange, expanded: .white),
+                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .orange))
+                    .items(items: Items.four())
                     .backgroundColor(.white)
                     .build()
-            SpringMenu(settings: settings1)
-                    .frame(height: 300)
-
-            let settings2 = SpringMenuSettings.Builder()
-                    .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .green, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .green))
-                    .items(items: Items.five(), gravity: .bottom)
-                    .backgroundColor(.white)
-                    .build()
-            SpringMenu(settings: settings2)
-                    .frame(height: 300)
-
-            let settings3 = SpringMenuSettings.Builder()
-                    .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .green, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .green))
-                    .items(items: Items.five(), gravity: .leading)
-                    .backgroundColor(.white)
-                    .build()
-            SpringMenu(settings: settings3)
-                    .frame(height: 300)
-
-            let settings4 = SpringMenuSettings.Builder()
-                    .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .green, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .green))
-                    .items(items: Items.five(), gravity: .trailing)
-                    .backgroundColor(.white)
-                    .build()
-            SpringMenu(settings: settings4)
+            return SpringMenu(isExpanded: $isExpanded, settings: settings)
                     .frame(height: 300)
         }
     }
 
-    private func Six() -> some View {
-        Group {
-            let settings1 = SpringMenuSettings.Builder()
-                    .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .pink, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .pink))
-                    .items(items: Items.six(), position: .vertical)
-                    .backgroundColor(.white)
-                    .build()
-            SpringMenu(settings: settings1)
-                    .frame(height: 300)
+    private struct Five: View {
+        @State var isExpanded: Bool = false
+        @State var isExpanded2: Bool = false
+        @State var isExpanded3: Bool = false
+        @State var isExpanded4: Bool = false
 
-            let settings2 = SpringMenuSettings.Builder()
-                    .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .pink, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .pink))
-                    .items(items: Items.six(), position: .horizontal)
-                    .backgroundColor(.white)
-                    .build()
-            SpringMenu(settings: settings2)
-                    .frame(height: 300)
+        var body: some View {
+            Group {
+                let settings1 = SpringMenuSettings.Builder()
+                        .icon(.plus,
+                                backgroundColor: SpringIconColor(collapsed: .green, expanded: .white),
+                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .green))
+                        .items(items: Items.five(), gravity: .top)
+                        .backgroundColor(.white)
+                        .build()
+                SpringMenu(isExpanded: $isExpanded, settings: settings1)
+                        .frame(height: 300)
+
+                let settings2 = SpringMenuSettings.Builder()
+                        .icon(.plus,
+                                backgroundColor: SpringIconColor(collapsed: .green, expanded: .white),
+                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .green))
+                        .items(items: Items.five(), gravity: .bottom)
+                        .backgroundColor(.white)
+                        .build()
+                SpringMenu(isExpanded: $isExpanded2, settings: settings2)
+                        .frame(height: 300)
+
+                let settings3 = SpringMenuSettings.Builder()
+                        .icon(.plus,
+                                backgroundColor: SpringIconColor(collapsed: .green, expanded: .white),
+                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .green))
+                        .items(items: Items.five(), gravity: .leading)
+                        .backgroundColor(.white)
+                        .build()
+                SpringMenu(isExpanded: $isExpanded3, settings: settings3)
+                        .frame(height: 300)
+
+                let settings4 = SpringMenuSettings.Builder()
+                        .icon(.plus,
+                                backgroundColor: SpringIconColor(collapsed: .green, expanded: .white),
+                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .green))
+                        .items(items: Items.five(), gravity: .trailing)
+                        .backgroundColor(.white)
+                        .build()
+                SpringMenu(isExpanded: $isExpanded4, settings: settings4)
+                        .frame(height: 300)
+            }
         }
     }
 
-    private func Seven() -> some View {
-        Group {
-            let settings1 = SpringMenuSettings.Builder()
-                    .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .purple, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .purple))
-                    .items(items: Items.seven(), gravity: .top)
-                    .backgroundColor(.white)
-                    .build()
-            SpringMenu(settings: settings1)
-                    .frame(height: 300)
+    private struct Six: View {
+        @State var isExpanded: Bool = false
+        @State var isExpanded2: Bool = false
 
-            let settings2 = SpringMenuSettings.Builder()
-                    .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .purple, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .purple))
-                    .items(items: Items.seven(), gravity: .bottom)
-                    .backgroundColor(.white)
-                    .build()
-            SpringMenu(settings: settings2)
-                    .frame(height: 300)
+        var body: some View {
+            Group {
+                let settings1 = SpringMenuSettings.Builder()
+                        .icon(.plus,
+                                backgroundColor: SpringIconColor(collapsed: .pink, expanded: .white),
+                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .pink))
+                        .items(items: Items.six(), position: .vertical)
+                        .backgroundColor(.white)
+                        .build()
+                SpringMenu(isExpanded: $isExpanded, settings: settings1)
+                        .frame(height: 300)
 
-            let settings3 = SpringMenuSettings.Builder()
-                    .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .purple, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .purple))
-                    .items(items: Items.seven(), gravity: .leading)
-                    .backgroundColor(.white)
-                    .build()
-            SpringMenu(settings: settings3)
-                    .frame(height: 300)
-
-            let settings4 = SpringMenuSettings.Builder()
-                    .icon(.plus,
-                            backgroundColor: SpringIconColor(collapsed: .purple, expanded: .white),
-                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .purple))
-                    .items(items: Items.seven(), gravity: .trailing)
-                    .backgroundColor(.white)
-                    .build()
-            SpringMenu(settings: settings4)
-                    .frame(height: 300)
+                let settings2 = SpringMenuSettings.Builder()
+                        .icon(.plus,
+                                backgroundColor: SpringIconColor(collapsed: .pink, expanded: .white),
+                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .pink))
+                        .items(items: Items.six(), position: .horizontal)
+                        .backgroundColor(.white)
+                        .build()
+                SpringMenu(isExpanded: $isExpanded2, settings: settings2)
+                        .frame(height: 300)
+            }
         }
     }
 
-    private func Eight() -> some View {
-        let settings = SpringMenuSettings.Builder()
-                .icon(.plus,
-                        backgroundColor: SpringIconColor(collapsed: .red, expanded: .white),
-                        foreGroundColor: SpringIconColor(collapsed: .white, expanded: .red))
-                .items(items: Items.eight())
-                .backgroundColor(.white)
-                .build()
-        return SpringMenu(settings: settings)
-                .frame(height: 300)
+    private struct Seven: View {
+        @State var isExpanded: Bool = false
+        @State var isExpanded2: Bool = false
+        @State var isExpanded3: Bool = false
+        @State var isExpanded4: Bool = false
+
+        var body: some View {
+            Group {
+                let settings1 = SpringMenuSettings.Builder()
+                        .icon(.plus,
+                                backgroundColor: SpringIconColor(collapsed: .purple, expanded: .white),
+                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .purple))
+                        .items(items: Items.seven(), gravity: .top)
+                        .backgroundColor(.white)
+                        .build()
+                SpringMenu(isExpanded: $isExpanded, settings: settings1)
+                        .frame(height: 300)
+
+                let settings2 = SpringMenuSettings.Builder()
+                        .icon(.plus,
+                                backgroundColor: SpringIconColor(collapsed: .purple, expanded: .white),
+                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .purple))
+                        .items(items: Items.seven(), gravity: .bottom)
+                        .backgroundColor(.white)
+                        .build()
+                SpringMenu(isExpanded: $isExpanded2, settings: settings2)
+                        .frame(height: 300)
+
+                let settings3 = SpringMenuSettings.Builder()
+                        .icon(.plus,
+                                backgroundColor: SpringIconColor(collapsed: .purple, expanded: .white),
+                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .purple))
+                        .items(items: Items.seven(), gravity: .leading)
+                        .backgroundColor(.white)
+                        .build()
+                SpringMenu(isExpanded: $isExpanded3, settings: settings3)
+                        .frame(height: 300)
+
+                let settings4 = SpringMenuSettings.Builder()
+                        .icon(.plus,
+                                backgroundColor: SpringIconColor(collapsed: .purple, expanded: .white),
+                                foreGroundColor: SpringIconColor(collapsed: .white, expanded: .purple))
+                        .items(items: Items.seven(), gravity: .trailing)
+                        .backgroundColor(.white)
+                        .build()
+                SpringMenu(isExpanded: $isExpanded4, settings: settings4)
+                        .frame(height: 300)
+            }
+        }
+    }
+
+    private struct Eight: View {
+        @State var isExpanded: Bool = false
+
+        var body: some View {
+            let settings = SpringMenuSettings.Builder()
+                    .icon(.plus,
+                            backgroundColor: SpringIconColor(collapsed: .red, expanded: .white),
+                            foreGroundColor: SpringIconColor(collapsed: .white, expanded: .red))
+                    .items(items: Items.eight())
+                    .backgroundColor(.white)
+                    .build()
+            return SpringMenu(isExpanded: $isExpanded, settings: settings)
+                    .frame(height: 300)
+        }
     }
 }
 
@@ -256,6 +299,9 @@ class Items {
                         .icon(Image(systemName: "photo"))
                         .backgroundColor(.black)
                         .foregroundColor(.white)
+                        .onTap {
+                            print("Photo item tapped")
+                        }
                         .build(),
                 item2: SpringItem.Builder()
                         .icon(Image(systemName: "note.text"))
