@@ -10,13 +10,14 @@ SpringMenu
 </p>
 
 <p align="center">
-	<a href="https://travis-ci.com/ShabanKamell/SpringMenu"> <img src="https://travis-ci.com/ShabanKamell/SpringMenu.svg?branch=master" height="20"/></a>
 	<a href=""><img src="https://img.shields.io/badge/platforms-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20Linux-333333.svg" height="20"/></a>
 	<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" height="20"/></a>
 	<a href="https://github.com/ShabanKamell/SpringMenu/blob/master/LICENSE"><img src="https://img.shields.io/badge/price-FREE-0098f7.svg" height="20"/></a>
-</p><br/><br/>
+</p>
 
-[![Demo](https://img.youtube.com/vi/_jS7ffhYNsw/0.jpg)](https://www.youtube.com/watch?v=_jS7ffhYNsw)
+<br/><br/>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_jS7ffhYNsw?&autoplay=1" frameborder="0" allowfullscreen></iframe>
 
 # Table of contents
 
@@ -53,8 +54,8 @@ Add the following as a dependency to your `Package.swift`:
 .package(url: "https://github.com/ShabanKamell/SpringMenu.git")
 ```
 
-and then specify `"SpringMenu"` as a dependency of the Target in which you wish to use SpringMenu.
-Here's an example `PackageDescription`:
+and then specify `"SpringMenu"` as a dependency of the Target in which you wish to use SpringMenu. Here's an
+example `PackageDescription`:
 
 ```swift
 // swift-tools-version:5.1
@@ -82,8 +83,8 @@ let package = Package(
 ### Accio
 
 [Accio](https://github.com/JamitLabs/Accio) is a dependency manager based on SwiftPM which can build frameworks for
-iOS/macOS/tvOS/watchOS. Therefore the integration steps of SpringMenu are exactly the same as described above.
-Once your `Package.swift` file is configured, run `accio update` instead of `swift package update`.
+iOS/macOS/tvOS/watchOS. Therefore the integration steps of SpringMenu are exactly the same as described above. Once
+your `Package.swift` file is configured, run `accio update` instead of `swift package update`.
 
 Don't forget to add `import SpringMenu` to use the framework.
 
@@ -107,6 +108,7 @@ explained [over at Carthage](https://github.com/Carthage/Carthage#adding-framewo
 All Pull Requests (PRs) are welcome. Help us make this library better.
 
 ## Changelog
+
 Look at [Changelog](https://github.com/ShabanKamell/SwiftUIFormValidator/blob/master/CHANGELOG.md) for release notes.
 
 ## License
