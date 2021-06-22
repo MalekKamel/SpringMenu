@@ -17,16 +17,10 @@ SpringMenu
 
 <br/><br/>
 
-
-
-<div align="center">
-	<h1 align="center">Demo Video</h1>
-        <a href="https://www.youtube.com/watch?v=_jS7ffhYNsw"><img src="https://img.youtube.com/vi/_jS7ffhYNsw/0.jpg" alt="IMAGE ALT TEXT"></a>
-</div>
-
 # Table of contents
 
 - [Usage](#usage)
+    - [Design](#design)
     - [Basic Setup](#basic-setup)
 - [Installation](#installation)
     - [CocoaPods](#cocoapods)
@@ -38,6 +32,10 @@ SpringMenu
 - [License](#license)
 
 ## :zap: Usage
+
+## Design
+
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/structure.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
 
 ### Basic Setup
 
@@ -68,6 +66,302 @@ let settings = SpringMenuSettings.Builder()
 // 3- The Menu :)
 SpringMenu(isExpanded: $isExpanded, settings: settings)
         .frame(height: 300)
+```
+
+## Items
+
+**SpringMenu** supports from 2 to 8 items. Some numbers require position or gravity to display correctly. In the
+following lines, we'll explain how to use the items.
+
+### 2 Items
+
+```swift
+
+TwoSpringItems(
+        item1: SpringItem.Builder()
+                .icon(Image(systemName: "photo"))
+                .backgroundColor(.black)
+                .foregroundColor(.white)
+                .build(),
+        item2: SpringItem.Builder()
+                .icon(Image(systemName: "note.text"))
+                .backgroundColor(.black)
+                .foregroundColor(.white)
+                .build()
+)
+
+```
+
+#### Position
+
+```swift
+enum Position {
+    case top
+    case bottom
+    case vertical
+    case horizontal
+}
+```
+
+### 3 Items
+
+```swift
+
+ThreeSpringItems(
+        item1: SpringItem.Builder()
+                .icon(Image(systemName: "photo"))
+                .backgroundColor(.blue)
+                .foregroundColor(.white)
+                .build(),
+        item2: SpringItem.Builder()
+                .icon(Image(systemName: "note.text"))
+                .backgroundColor(.blue)
+                .foregroundColor(.white)
+                .build(),
+        item3: SpringItem.Builder()
+                .icon(Image(systemName: "doc"))
+                .backgroundColor(.blue)
+                .foregroundColor(.white)
+                .build()
+)
+
+```
+
+#### Position
+
+```swift
+enum Position {
+    case top
+    case bottom
+    case leading
+    case trailing
+}
+```
+
+### 4 Items
+
+```swift
+
+FourSpringItems(
+        item1: SpringItem.Builder()
+                .icon(Image(systemName: "photo"))
+                .backgroundColor(.orange)
+                .foregroundColor(.white)
+                .build(),
+        item2: SpringItem.Builder()
+                .icon(Image(systemName: "note.text"))
+                .backgroundColor(.orange)
+                .foregroundColor(.white)
+                .build(),
+        item3: SpringItem.Builder()
+                .icon(Image(systemName: "doc"))
+                .backgroundColor(.orange)
+                .foregroundColor(.white)
+                .build(),
+        item4: SpringItem.Builder()
+                .icon(Image(systemName: "mic.fill"))
+                .backgroundColor(.orange)
+                .foregroundColor(.white)
+                .build()
+)
+
+```
+
+### 5 Items
+
+```swift
+
+FiveSpringItems(
+        item1: SpringItem.Builder()
+                .icon(Image(systemName: "photo"))
+                .backgroundColor(.green)
+                .foregroundColor(.white)
+                .build(),
+        item2: SpringItem.Builder()
+                .icon(Image(systemName: "note.text"))
+                .backgroundColor(.green)
+                .foregroundColor(.white)
+                .build(),
+        item3: SpringItem.Builder()
+                .icon(Image(systemName: "doc"))
+                .backgroundColor(.green)
+                .foregroundColor(.white)
+                .build(),
+        item4: SpringItem.Builder()
+                .icon(Image(systemName: "mic.fill"))
+                .backgroundColor(.green)
+                .foregroundColor(.white)
+                .build(),
+        item5: SpringItem.Builder()
+                .icon(Image(systemName: "pencil.circle"))
+                .backgroundColor(.green)
+                .foregroundColor(.white)
+                .build()
+)
+
+```
+
+#### Gravity
+
+```swift
+enum Gravity {
+    case top
+    case bottom
+    case leading
+    case trailing
+}
+```
+
+### 6 Items
+
+```swift
+
+SixSpringItems(
+        item1: SpringItem.Builder()
+                .icon(Image(systemName: "photo"))
+                .backgroundColor(.pink)
+                .foregroundColor(.white)
+                .build(),
+        item2: SpringItem.Builder()
+                .icon(Image(systemName: "note.text"))
+                .backgroundColor(.pink)
+                .foregroundColor(.white)
+                .build(),
+        item3: SpringItem.Builder()
+                .icon(Image(systemName: "doc"))
+                .backgroundColor(.pink)
+                .foregroundColor(.white)
+                .build(),
+        item4: SpringItem.Builder()
+                .icon(Image(systemName: "mic.fill"))
+                .backgroundColor(.pink)
+                .foregroundColor(.white)
+                .build(),
+        item5: SpringItem.Builder()
+                .icon(Image(systemName: "pencil.circle"))
+                .backgroundColor(.pink)
+                .foregroundColor(.white)
+                .build(),
+        item6: SpringItem.Builder()
+                .icon(Image(systemName: "folder"))
+                .backgroundColor(.pink)
+                .foregroundColor(.white)
+                .build()
+)
+
+```
+
+#### Position
+
+```swift
+enum Position {
+    case vertical
+    case horizontal
+}
+```
+
+### 7 Items
+
+```swift
+
+SevenSpringItems(
+        item1: SpringItem.Builder()
+                .icon(Image(systemName: "photo"))
+                .backgroundColor(.purple)
+                .foregroundColor(.white)
+                .build(),
+        item2: SpringItem.Builder()
+                .icon(Image(systemName: "note.text"))
+                .backgroundColor(.purple)
+                .foregroundColor(.white)
+                .build(),
+        item3: SpringItem.Builder()
+                .icon(Image(systemName: "doc"))
+                .backgroundColor(.purple)
+                .foregroundColor(.white)
+                .build(),
+        item4: SpringItem.Builder()
+                .icon(Image(systemName: "mic.fill"))
+                .backgroundColor(.purple)
+                .foregroundColor(.white)
+                .build(),
+        item5: SpringItem.Builder()
+                .icon(Image(systemName: "pencil.circle"))
+                .backgroundColor(.purple)
+                .foregroundColor(.white)
+                .build(),
+        item6: SpringItem.Builder()
+                .icon(Image(systemName: "folder"))
+                .backgroundColor(.purple)
+                .foregroundColor(.white)
+                .build(),
+        item7: SpringItem.Builder()
+                .icon(Image(systemName: "mic.fill"))
+                .backgroundColor(.purple)
+                .foregroundColor(.white)
+                .build()
+)
+
+```
+
+#### Gravity
+
+```swift
+enum Gravity {
+    case top
+    case bottom
+    case leading
+    case trailing
+}
+```
+
+### 8 Items
+
+```swift
+
+EightSpringItems(
+        item1: SpringItem.Builder()
+                .icon(Image(systemName: "photo"))
+                .backgroundColor(.red)
+                .foregroundColor(.white)
+                .build(),
+        item2: SpringItem.Builder()
+                .icon(Image(systemName: "note.text"))
+                .backgroundColor(.red)
+                .foregroundColor(.white)
+                .build(),
+        item3: SpringItem.Builder()
+                .icon(Image(systemName: "doc"))
+                .backgroundColor(.red)
+                .foregroundColor(.white)
+                .build(),
+        item4: SpringItem.Builder()
+                .icon(Image(systemName: "mic.fill"))
+                .backgroundColor(.red)
+                .foregroundColor(.white)
+                .build(),
+        item5: SpringItem.Builder()
+                .icon(Image(systemName: "pencil.circle"))
+                .backgroundColor(.red)
+                .foregroundColor(.white)
+                .build(),
+        item6: SpringItem.Builder()
+                .icon(Image(systemName: "folder"))
+                .backgroundColor(.red)
+                .foregroundColor(.white)
+                .build(),
+        item7: SpringItem.Builder()
+                .icon(Image(systemName: "square.and.arrow.up"))
+                .backgroundColor(.red)
+                .foregroundColor(.white)
+                .build(),
+        item8: SpringItem.Builder()
+                .icon(Image(systemName: "arrowshape.turn.up.forward"))
+                .backgroundColor(.red)
+                .foregroundColor(.white)
+                .build()
+)
+
 ```
 
 ## :tada: Installation
