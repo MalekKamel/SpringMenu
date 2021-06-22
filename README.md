@@ -16,6 +16,89 @@ SpringMenu
 	<a href="https://github.com/ShabanKamell/SpringMenu/blob/master/LICENSE"><img src="https://img.shields.io/badge/price-FREE-0098f7.svg" height="20"/></a>
 </p><br/><br/>
 
+# Table of contents
+
+- [Usage](#usage)
+    - [Basic Setup](#basic-setup)
+- [Installation](#installation)
+    - [CocoaPods](#cocoapods)
+    - [Swift Package Manager](#swift-package-manager)
+    - [Accio](#accio)
+    - [Carthage](#carthage)
+- [Contribution](#contribution)
+- [License](#license)
+
+## :zap: Usage
+
+## :tada: Installation
+
+### CocoaPods
+
+Use the following entry in your Podfile:
+
+```rb
+pod 'SpringMenu'
+```
+
+Then run `pod install`.
+
+### Swift Package Manager
+
+Add the following as a dependency to your `Package.swift`:
+
+```swift
+.package(url: "https://github.com/ShabanKamell/SpringMenu.git")
+```
+
+and then specify `"SpringMenu"` as a dependency of the Target in which you wish to use SpringMenu.
+Here's an example `PackageDescription`:
+
+```swift
+// swift-tools-version:5.1
+
+import PackageDescription
+
+let package = Package(
+        name: "MyPackage",
+        products: [
+            .library(
+                    name: "MyPackage",
+                    targets: ["MyPackage"]),
+        ],
+        dependencies: [
+            .package(url: "https://github.com/ShabanKamell/SpringMenu")
+        ],
+        targets: [
+            .target(
+                    name: "MyPackage",
+                    dependencies: ["SpringMenu"])
+        ]
+)
+```
+
+### Accio
+
+[Accio](https://github.com/JamitLabs/Accio) is a dependency manager based on SwiftPM which can build frameworks for
+iOS/macOS/tvOS/watchOS. Therefore the integration steps of SpringMenu are exactly the same as described above.
+Once your `Package.swift` file is configured, run `accio update` instead of `swift package update`.
+
+Don't forget to add `import SpringMenu` to use the framework.
+
+### Carthage
+
+Carthage users can point to this repository and use generated `SpringMenu` framework.
+
+Make the following entry in your Cartfile:
+
+```rb
+github "ShabanKamell/SpringMenu"
+```
+
+Then run `carthage update`.
+
+If this is your first time using Carthage in the project, you'll need to go through some additional steps as
+explained [over at Carthage](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application).
+
 ## Contribution
 
 All Pull Requests (PRs) are welcome. Help us make this library better.
