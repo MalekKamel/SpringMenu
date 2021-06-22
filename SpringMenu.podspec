@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name             = 'SpringMenu'
-  s.version          = '0.9.0'
-  s.summary          = 'An awesome expandable menu for SwiftUI'
+  s.version          = '0.1.0'
+  s.summary          = 'The most awesome SwiftUI menu with spring animation'
   s.description      = <<-DESC
-An awesome expandable menu for SwiftUI. Clean, simple, and customizable.
+The most awesome SwiftUI menu with spring animation. Clean, simple, and customizable.
 DESC
 
   s.homepage         = 'https://github.com/ShabanKamell/SpringMenu'
