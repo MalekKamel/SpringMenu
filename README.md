@@ -26,6 +26,7 @@ SpringMenu
     - [Accio](#accio)
     - [Carthage](#carthage)
 - [Contribution](#contribution)
+- [Changelog](#changelog)
 - [License](#license)
 
 ## :zap: Usage
@@ -102,6 +103,9 @@ explained [over at Carthage](https://github.com/Carthage/Carthage#adding-framewo
 ## Contribution
 
 All Pull Requests (PRs) are welcome. Help us make this library better.
+
+## Changelog
+Look at [Changelog](https://github.com/ShabanKamell/SwiftUIFormValidator/blob/master/CHANGELOG.md) for release notes.
 
 ## License
 
