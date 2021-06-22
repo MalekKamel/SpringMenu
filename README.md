@@ -16,7 +16,7 @@ SpringMenu
 	<a href="https://github.com/ShabanKamell/SpringMenu/blob/master/LICENSE"><img src="https://img.shields.io/badge/price-FREE-0098f7.svg" height="20"/></a>
 </p><br/><br/>
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/_jS7ffhYNsw/0.jpg)](https://www.youtube.com/watch?v=_jS7ffhYNsw)
+[![Demo](https://img.youtube.com/vi/_jS7ffhYNsw/0.jpg)](https://www.youtube.com/watch?v=_jS7ffhYNsw)
 
 # Table of contents
 
