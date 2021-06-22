@@ -27,17 +27,48 @@ SpringMenu
 # Table of contents
 
 - [Usage](#usage)
-  - [Basic Setup](#basic-setup)
+    - [Basic Setup](#basic-setup)
 - [Installation](#installation)
-  - [CocoaPods](#cocoapods)
-  - [Swift Package Manager](#swift-package-manager)
-  - [Accio](#accio)
-  - [Carthage](#carthage)
+    - [CocoaPods](#cocoapods)
+    - [Swift Package Manager](#swift-package-manager)
+    - [Accio](#accio)
+    - [Carthage](#carthage)
 - [Contribution](#contribution)
 - [Changelog](#changelog)
 - [License](#license)
 
 ## :zap: Usage
+
+### Basic Setup
+
+```swift
+// 1- Define items
+let items = TwoSpringItems(
+        item1: SpringItem.Builder()
+                .icon(Image(systemName: "photo"))
+                .backgroundColor(.black)
+                .foregroundColor(.white)
+                .build(),
+        item2: SpringItem.Builder()
+                .icon(Image(systemName: "note.text"))
+                .backgroundColor(.black)
+                .foregroundColor(.white)
+                .build()
+)
+
+// 2- Define settings
+let settings = SpringMenuSettings.Builder()
+        .icon(.plus,
+                backgroundColor: .init(collapsed: .black, expanded: .white),
+                foreGroundColor: .init(collapsed: .white, expanded: .black))
+        .items(items: items, position: .top)
+        .backgroundColor(.white)
+        .build()
+
+// 3- The Menu :)
+SpringMenu(isExpanded: $isExpanded, settings: settings)
+        .frame(height: 300)
+```
 
 ## :tada: Installation
 
@@ -70,17 +101,17 @@ import PackageDescription
 let package = Package(
         name: "MyPackage",
         products: [
-          .library(
-                  name: "MyPackage",
-                  targets: ["MyPackage"]),
+            .library(
+                    name: "MyPackage",
+                    targets: ["MyPackage"]),
         ],
         dependencies: [
-          .package(url: "https://github.com/ShabanKamell/SpringMenu")
+            .package(url: "https://github.com/ShabanKamell/SpringMenu")
         ],
         targets: [
-          .target(
-                  name: "MyPackage",
-                  dependencies: ["SpringMenu"])
+            .target(
+                    name: "MyPackage",
+                    dependencies: ["SpringMenu"])
         ]
 )
 ```

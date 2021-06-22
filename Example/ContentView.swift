@@ -7,6 +7,7 @@ import SwiftUI
 import SpringMenu
 
 struct ContentView: View {
+    @State var isExpanded: Bool = false
 
     var body: some View {
         ScrollView {
@@ -19,6 +20,48 @@ struct ContentView: View {
             Eight()
         }
     }
+
+}
+
+extension ContentView {
+
+    private func BasicSetup() -> some View {
+        Group {
+            // 1- Define items
+            let items = TwoSpringItems(
+                    item1: SpringItem.Builder()
+                            .icon(Image(systemName: "photo"))
+                            .backgroundColor(.black)
+                            .foregroundColor(.white)
+                            .onTap {
+                                print("Photo item tapped")
+                            }
+                            .build(),
+                    item2: SpringItem.Builder()
+                            .icon(Image(systemName: "note.text"))
+                            .backgroundColor(.black)
+                            .foregroundColor(.white)
+                            .build()
+            )
+
+            // 2- Define settings
+            let settings = SpringMenuSettings.Builder()
+                    .icon(.plus,
+                            backgroundColor: .init(collapsed: .black, expanded: .white),
+                            foreGroundColor: .init(collapsed: .white, expanded: .black))
+                    .items(items: items, position: .top)
+                    .backgroundColor(.white)
+                    .build()
+
+            // 3- The Menu :)
+            SpringMenu(isExpanded: $isExpanded, settings: settings)
+                    .frame(height: 300)
+        }
+    }
+
+}
+
+extension ContentView {
 
     private struct Two: View {
         @State var isExpanded: Bool = false
@@ -76,6 +119,10 @@ struct ContentView: View {
         }
     }
 
+}
+
+extension ContentView {
+
     private struct Three: View {
         @State var isExpanded: Bool = false
         @State var isExpanded2: Bool = false
@@ -127,6 +174,10 @@ struct ContentView: View {
         }
     }
 
+}
+
+extension ContentView {
+
     private struct Four: View {
         @State var isExpanded: Bool = false
 
@@ -142,6 +193,10 @@ struct ContentView: View {
                     .frame(height: 300)
         }
     }
+
+}
+
+extension ContentView {
 
     private struct Five: View {
         @State var isExpanded: Bool = false
@@ -194,6 +249,10 @@ struct ContentView: View {
         }
     }
 
+}
+
+extension ContentView {
+
     private struct Six: View {
         @State var isExpanded: Bool = false
         @State var isExpanded2: Bool = false
@@ -222,6 +281,10 @@ struct ContentView: View {
             }
         }
     }
+
+}
+
+extension ContentView {
 
     private struct Seven: View {
         @State var isExpanded: Bool = false
@@ -274,6 +337,10 @@ struct ContentView: View {
         }
     }
 
+}
+
+extension ContentView {
+
     private struct Eight: View {
         @State var isExpanded: Bool = false
 
@@ -289,6 +356,7 @@ struct ContentView: View {
                     .frame(height: 300)
         }
     }
+
 }
 
 class Items {
