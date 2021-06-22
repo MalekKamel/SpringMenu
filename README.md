@@ -17,17 +17,22 @@ SpringMenu
 
 <br/><br/>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_jS7ffhYNsw?&autoplay=1" frameborder="0" allowfullscreen></iframe>
+
+
+<div align="center">
+	<h1 align="center">Demo Video</h1>
+        <a href="https://www.youtube.com/watch?v=_jS7ffhYNsw"><img src="https://img.youtube.com/vi/_jS7ffhYNsw/0.jpg" alt="IMAGE ALT TEXT"></a>
+</div>
 
 # Table of contents
 
 - [Usage](#usage)
-    - [Basic Setup](#basic-setup)
+  - [Basic Setup](#basic-setup)
 - [Installation](#installation)
-    - [CocoaPods](#cocoapods)
-    - [Swift Package Manager](#swift-package-manager)
-    - [Accio](#accio)
-    - [Carthage](#carthage)
+  - [CocoaPods](#cocoapods)
+  - [Swift Package Manager](#swift-package-manager)
+  - [Accio](#accio)
+  - [Carthage](#carthage)
 - [Contribution](#contribution)
 - [Changelog](#changelog)
 - [License](#license)
@@ -65,17 +70,17 @@ import PackageDescription
 let package = Package(
         name: "MyPackage",
         products: [
-            .library(
-                    name: "MyPackage",
-                    targets: ["MyPackage"]),
+          .library(
+                  name: "MyPackage",
+                  targets: ["MyPackage"]),
         ],
         dependencies: [
-            .package(url: "https://github.com/ShabanKamell/SpringMenu")
+          .package(url: "https://github.com/ShabanKamell/SpringMenu")
         ],
         targets: [
-            .target(
-                    name: "MyPackage",
-                    dependencies: ["SpringMenu"])
+          .target(
+                  name: "MyPackage",
+                  dependencies: ["SpringMenu"])
         ]
 )
 ```
