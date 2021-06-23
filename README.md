@@ -446,7 +446,7 @@ EightSpringItems(
 
 ```
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/8.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/8.jpeg?raw=true" alt="Gray shape shifter" width="250" height="250"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/8.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/8.jpeg?raw=true" alt="Gray shape shifter" width="260" height="250"/></a></p>
 
 ## :tada: Installation
 
