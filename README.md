@@ -1,7 +1,7 @@
 SpringMenu
 ================
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/logo2.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/logo2.jpeg?raw=true" alt="Gray shape shifter" height="300"/></a></p>
 <h1 align="center">SpringMenu</h1>
 <p align="center">The most awesome SwiftUI menu with spring animation</p>
 
@@ -43,7 +43,7 @@ SpringMenu
 
 ## Design
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/structure.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/structure.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/structure.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/structure.jpeg?raw=true" alt="Gray shape shifter" height="300"/></a></p>
 
 ### Basic Setup
 
@@ -113,15 +113,15 @@ enum Position {
 
 ##### Top
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/2-top.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/2-top.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/2-top.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/2-top.jpeg?raw=true" alt="Gray shape shifter" width="325" height="200"/></a></p>
 
 ##### Bottom
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/2-bottom.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/2-bottom.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/2-bottom.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/2-bottom.jpeg?raw=true" alt="Gray shape shifter" width="325" height="200"/></a></p>
 
 ##### Vertical
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/2-vertical.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/2-vertical.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/2-vertical.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/2-vertical.jpeg?raw=true" alt="Gray shape shifter" width="325" height="270"/></a></p>
 
 ##### Horizontal
 
@@ -164,19 +164,19 @@ enum Position {
 
 ##### Top
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/3-top.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/3-top.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/3-top.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/3-top.jpeg?raw=true" alt="Gray shape shifter" width="250" height="200"/></a></p>
 
 ##### Bottom
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/3-bottom.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/3-bottom.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/3-bottom.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/3-bottom.jpeg?raw=true" alt="Gray shape shifter" width="250" height="200"/></a></p>
 
 ##### Leading
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/3-leading.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/3-leading.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/3-leading.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/3-leading.jpeg?raw=true" alt="Gray shape shifter" width="250" height="200"/></a></p>
 
 ##### Trailing
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/3-trailing.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/3-trailing.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/3-trailing.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/3-trailing.jpeg?raw=true" alt="Gray shape shifter" width="250" height="200"/></a></p>
 
 ### 4 Items
 
@@ -207,7 +207,7 @@ FourSpringItems(
 
 ```
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/4.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/4.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/4.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/4.jpeg?raw=true" alt="Gray shape shifter"width="250"  height="250"/></a></p>
 
 ### 5 Items
 
@@ -256,19 +256,19 @@ enum Gravity {
 
 ##### Top
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/5-top.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/5-top.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/5-top.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/5-top.jpeg?raw=true" alt="Gray shape shifter" width="250" height="200"/></a></p>
 
 ##### Bottom
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/5-bottom.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/5-bottom.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/5-bottom.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/5-bottom.jpeg?raw=true" alt="Gray shape shifter" width="250" height="200"/></a></p>
 
 ##### Leading
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/5-leading.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/5-leading.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/5-leading.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/5-leading.jpeg?raw=true" alt="Gray shape shifter" width="250" height="250"/></a></p>
 
 ##### Trailing
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/5-trailing.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/5-trailing.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/5-trailing.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/5-trailing.jpeg?raw=true" alt="Gray shape shifter" width="250" height="250"/></a></p>
 
 ### 6 Items
 
@@ -320,11 +320,11 @@ enum Position {
 
 ##### Vertical
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/6-vertical.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/6-vertical.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/6-vertical.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/6-vertical.jpeg?raw=true" alt="Gray shape shifter" width="250" height="250"/></a></p>
 
 ##### Horizontal
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/6-horizontal.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/6-horizontal.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/6-horizontal.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/6-horizontal.jpeg?raw=true" alt="Gray shape shifter" width="250" height="250"/></a></p>
 
 ### 7 Items
 
@@ -383,19 +383,19 @@ enum Gravity {
 
 ##### Top
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/7-top.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/7-top.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/7-top.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/7-top.jpeg?raw=true" alt="Gray shape shifter" width="250" height="250"/></a></p>
 
 ##### Bottom
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/7-bottom.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/7-bottom.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/7-bottom.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/7-bottom.jpeg?raw=true" alt="Gray shape shifter" width="250" height="250"/></a></p>
 
 ##### Leading
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/7-leading.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/7-leading.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/7-leading.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/7-leading.jpeg?raw=true" alt="Gray shape shifter" width="250" height="250"/></a></p>
 
 ##### Trailing
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/7-trailing.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/7-trailing.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/7-trailing.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/7-trailing.jpeg?raw=true" alt="Gray shape shifter" width="250" height="250"/></a></p>
 
 ### 8 Items
 
@@ -446,7 +446,7 @@ EightSpringItems(
 
 ```
 
-<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/8.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/8.jpeg?raw=true" alt="Gray shape shifter" height="200"/></a></p>
+<p align="center"><a href="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/8.jpeg"><img src="https://github.com/ShabanKamell/SpringMenu/blob/master/blob/items/8.jpeg?raw=true" alt="Gray shape shifter" width="250" height="250"/></a></p>
 
 ## :tada: Installation
 
